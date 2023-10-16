@@ -22,6 +22,20 @@ body {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    width: 12px; 
+}
+
+body::-webkit-scrollbar-track {
+    background: #181818;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffffcb;
+    border-radius: 20px; 
+    border: 3px solid #181818;
+}
+
 .background {
     z-index: -1;
     top: 0;
