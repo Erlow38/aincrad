@@ -138,12 +138,14 @@ h5 {
 }
 
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 10rem;
     height: 4rem;
     margin-left: 5rem;
     text-decoration: none;
-    padding: 0.7rem 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: 2px solid white;
     outline: none;
     background-color: transparent;
