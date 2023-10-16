@@ -60,11 +60,56 @@ body {
     height: 100vh;
 }
 
-h1 {
+.logo {
     position: absolute;
-    top: 35%;
+    top: 1rem;
+    left: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.hero-text-container {
+    position: absolute;
+    width: 50%;
+    top: 28%;
+    left: 3rem;
+}
+
+.hero-content-container {
+    display: flex;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.hero-content-container img {
+    width: 20rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 3px solid #fff;
+    transition: all 0.3s ease-in-out;}
+
+.hero-content-container img:hover {
+    scale: 1.02;
+}
+
+.hero-content-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content-item-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 4rem;
+}
+
+h1 {
     font-size: 7rem;
     letter-spacing: 1rem;
+    line-height: 0.9;
     font-weight: 500;
     margin-bottom: 1rem;
     color: white;
@@ -78,11 +123,19 @@ h2 {
     margin-bottom: 1rem;
 }
 
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+    color: #ffffffcb;
+}
+
 .btn {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 4rem;
+    margin-left: 5rem;
     text-decoration: none;
     padding: 0.7rem 2rem;
     font-size: 1.5rem;
@@ -101,7 +154,7 @@ h2 {
 }
 
 .btn:active {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: scale(0.9);
 }
 
 .discover-container {
