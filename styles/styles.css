@@ -73,15 +73,24 @@ body {
     color: #ffffffcb;
 }
 
+.logo-2 {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffffcb;
+}
+
 .hero-text-container {
     position: absolute;
-    width: 50%;
-    top: 28%;
-    left: 3rem;
+    top: 40%;
 }
 
 .hero-content-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 3rem;
     left: 3rem;
