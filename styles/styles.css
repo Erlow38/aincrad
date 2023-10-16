@@ -17,7 +17,7 @@ body {
     font-family: 'Poppins' ,'Roboto', sans-serif;
     font-size: 1.1rem;
     line-height: 1.5;
-    background-color: #000000;
+    background-color: #181818;
     color: white;
     overflow-x: hidden;
 }
@@ -182,7 +182,8 @@ h2 {
     font-weight: 400;
     letter-spacing: 0.5rem;
     color: white;
-    margin-bottom: 1rem;
+    margin: 1rem 2rem;
+    text-align: center;
 }
 
 h4 {
@@ -258,7 +259,15 @@ h5 {
 .level-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 2rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.level-container:hover {
+    transform: scale(1.01);
+    background: url(../img/aincrad-dark.jpg) no-repeat center center/cover;
 }
 
 .level-container img {
@@ -267,7 +276,7 @@ h5 {
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease-in-out;
-    margin: 0 2rem 4rem 2rem;
+    margin: 4rem 2rem 4rem 2rem;
     object-fit: cover;
     cursor: pointer;
 }
@@ -289,13 +298,13 @@ h5 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    background: url(../img/bg.jpg) no-repeat center center/cover;
     transition: all 0.3s ease-in-out;
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .card-container:hover {
     transform: scale(1.01);
+    background: url(../img/aincrad-dark.jpg) no-repeat center center/cover;
 }
 
 .card {
@@ -303,7 +312,7 @@ h5 {
     width: 320px;
     height: 480px;
     background: rgba( 0, 0, 0, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur( 16px );
     -webkit-backdrop-filter: blur( 16px );
     border-radius: 10px;
