@@ -1,7 +1,5 @@
 // Get a reference to the video container and the hero container
 const videoContainer = document.querySelector('.background');
-const heroContainer = document.querySelector('.hero-container');
-const parallaxDiv = document.querySelector('.parallax-div');
 
 // Define the parallax effect function
 function parallax() {
@@ -10,7 +8,6 @@ function parallax() {
 
     // Apply the parallax effect to the video container
     videoContainer.style.transform = `translateY(-${scrollPosition * 0.5}px)`;
-    parallaxDiv.style.transform = `translateY(-${scrollPosition * 0.5}px)`;
     //bannerContainer.style.transform = `translateY(-${scrollPosition * 0.5}px)`;
 
     // You can adjust the factor (0.5 in this example) to control the parallax speed
