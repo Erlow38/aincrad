@@ -375,7 +375,43 @@ a:hover {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin: 1rem;
+}
+
+
+.level-card .front,
+.level-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.level-card .front {
     padding: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.level-card .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-wrap;
+    text-align: justify;
+    padding: 2rem;
+    background-color: var(--blue);
+    border-radius: 20px;
+    transform: rotateY(180deg);
+}
+
+.level-card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.level-card.flipped .back {
+    transform: rotateY(0deg);
 }
 
 .level-card:hover {

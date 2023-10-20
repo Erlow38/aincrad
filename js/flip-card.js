@@ -1,19 +1,37 @@
-const card = document.querySelectorAll('.character-card');
+const characterCard = document.querySelectorAll('.character-card');
+const levelCard = document.querySelectorAll('.level-card');
 
-for (let i = 0; i < card.length; i++) {
-    card[i].addEventListener('click', function() {
-        for (let j = 0; j < card.length; j++) {
-            card[j].classList.remove('flipped');
+
+for (let i = 0; i < characterCard.length; i++) {
+    characterCard[i].addEventListener('click', function() {
+        for (let j = 0; j < characterCard.length; j++) {
+            characterCard[j].classList.remove('flipped');
         }
-        card[i].classList.add('flipped');
+        characterCard[i].classList.add('flipped');
     });
 }
 
-// si on clique n'importe ou hors de la carte, on enlève la classe flipped
 window.addEventListener('click', function(e) {
     if (!e.target.closest('.character-card')) {
-        for (let i = 0; i < card.length; i++) {
-            card[i].classList.remove('flipped');
+        for (let i = 0; i < characterCard.length; i++) {
+            characterCard[i].classList.remove('flipped');
+        }
+    }
+});
+
+for (let i = 0; i < levelCard.length; i++) {
+    levelCard[i].addEventListener('click', function() {
+        for (let j = 0; j < levelCard.length; j++) {
+            levelCard[j].classList.remove('flipped');
+        }
+        levelCard[i].classList.add('flipped');
+    });
+}
+
+window.addEventListener('click', function(e) {
+    if (!e.target.closest('.level-card')) {
+        for (let i = 0; i < levelCard.length; i++) {
+            levelCard[i].classList.remove('flipped');
         }
     }
 });
