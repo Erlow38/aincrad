@@ -835,8 +835,49 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+
+.description-card .front,
+.description-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.description-card .front {
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.description-card .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-wrap;
+    text-align: justify;
+    background-color: var(--blue);
+    border-radius: 20px;
+    transform: rotateY(180deg);
+}
+
+.description-card .back img, .description-card .back video {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+}
+.description-card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.description-card.flipped .back {
+    transform: rotateY(0deg);
+}
+
 .description-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .description-card::before {
