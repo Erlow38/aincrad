@@ -5,6 +5,7 @@
     --dark : #181818;
     --light : #f2f2f2;
     --smooth-white: #ffffffcb;
+    --blue : #223A59;
 }
 
 * {
@@ -18,7 +19,7 @@ body {
     font-family: 'Poppins' ,'Roboto', sans-serif;
     font-size: 1.1rem;
     line-height: 1.5;
-    background-color: rgb(12, 12, 12);
+    background-color: #121212;
     /*background: url(../img/aincrad-dark.jpg) no-repeat center center/cover fixed;   */
     color: white;
     overflow-x: hidden;
@@ -424,12 +425,6 @@ a:hover {
   
 
 
-.character-bg {
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
 
 .overlay-bg {
     position: absolute;
@@ -468,6 +463,42 @@ a:hover {
     margin: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    perspective: 1000px;
+}
+
+.character-card .front,
+.character-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.character-card .front {
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.character-card .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-wrap;
+    text-align: justify;
+    padding: 2rem;
+    background-color: var(--blue);
+    border-radius: 20px;
+    transform: rotateY(180deg);
+}
+
+.character-card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.character-card.flipped .back {
+    transform: rotateY(0deg);
 }
 
 .character-card:hover {
@@ -579,6 +610,7 @@ a:hover {
 
 .character-card:hover .card-img {
     transform: scale(1.1);
+    /* rotateY(180deg) */
 }
 
 .trailer-container {
@@ -586,7 +618,7 @@ a:hover {
     width: 100%;
     height: 30rem;
     margin: 7rem 0 0 0;
-    background-color: #223A59;
+    background-color: var(--blue);
     transition: all 0.3s ease-in-out;
 }
 
@@ -599,15 +631,15 @@ a:hover {
     width: 30%;
     aspect-ratio: 16/9;
     top: 50%;
-    right: 0;
+    left: 0;
     transform: translateY(-50%);
-    margin-right: 5rem;
+    margin-left: 5rem;
 }
 
 .trailer-text-container {
     position: absolute;
     top: 50%;
-    right: 50%;
+    left: 50%;
     transform: translateY(-50%);
 }
 
@@ -620,7 +652,7 @@ a:hover {
     margin-bottom: 1rem;
     color: white;
     padding: 5rem 3rem;
-    margin-left: 5rem;
+    margin-right: 5rem;
     
     background: rgba(197, 197, 197, 0.25);
     box-shadow: 0 8px 32px 0 rgba(73, 72, 72, 0.37);
@@ -729,4 +761,80 @@ a:hover {
     -webkit-backdrop-filter: blur( 16px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.text-banner-container  {
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    font-size: 13.5rem;
+    white-space: nowrap;
+    color: #222222
+}
+
+
+
+.description-container {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+.description-card {
+    position: relative;
+    min-width: 90vw;
+    height: 445px;
+    background-color: var(--dark);
+    /*background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );*/
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.description-card:hover {
+    transform: scale(1.05);
+}
+
+.description-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.description-card::after {
+    content: "アインクラッド";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 600;
+    font-size: 6em;
+    color: rgba(83, 81, 81, 0.1);
+}
+
+.description-card h3 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 1rem 2rem ;
+}
+
+.description-card p {
+    font-size: 1.5rem;
+    color: var(--smooth-white);
+    font-weight: 400;
+    margin: 2rem;
 }

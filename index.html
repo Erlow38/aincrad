@@ -21,7 +21,7 @@
                 <h1>Welcome to Aincrad</h1>
             </div>
             <div class="arrow-container">
-                <a href="#level"><div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg></div></a>
+                <a href="#trailer"><div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg></div></a>
             </div>
             <div class="hero-content-container">
                 <div class="hero-content-item">
@@ -53,14 +53,53 @@
 
     <div class="discover-container">
 
+        <div id="trailer" class="text-banner-container text-banner">
+            Sword Art Online
+        </div>
 
-        <div id="level" class="animated-banner-container">
+        <div id="trailer" class="trailer-container">
+            <iframe class="trailer" src="https://www.youtube.com/embed/d_7CDGqJvfk?si=jqYM1sYslOhytFet&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+            <div class="trailer-text-container">
+                <p class="trailer-text">Discover the castle Aincrad</p>
+            </div>
+        </div>
+
+        <div class="description-container">
+            <div class="description-card">
+                <h3>Aincrad</h3>
+                <p>Aincrad (アインクラッド, Ainkuraddo) is the first «Realized World» shown in the Sword Art Online series and the stage for the first VRMMORPG «Sword Art Online», created by Kayaba Akihiko.</p>
+            </div>
+
+            <div class="description-card">
+                <h3>VRMMO</h3>
+                <p>A VRMMO (Virtual Reality Massively Multiplayer Online) is an online multiplayer video game in virtual reality capable of supporting hundreds or even thousands of players simultaneously. “Virtual Reality” means experiencing reality through a game.</p>
+            </div>
+
+            <div class="description-card">
+                <h3>Monster</h3>
+                <p>Aincrad is populated by monsters and you will have to beat a boss at each level if you want to escape from it.</p>
+            </div>
+        </div>
+
+
+        <div id="level" class="text-banner-container text-banner-2">
+            100 levels
+        </div>
+
+        <div class="banner-container">
+            <img src="img/aincrad-mesh.png" alt="">
+            <div class="banner-text-container">
+                <p class="banner-text">100 levels to conquer</p>
+            </div>
+        </div>
+
+        <!--<div id="level" class="animated-banner-container">
             <video src="video/level-aincrad.mp4" autoplay loop muted></video>
             <div class="overlay"></div>
             <div class="animated-banner-text-container">
                 <p class="animated-banner-text">100 levels to conquer</p>
             </div>
-        </div>
+        </div>-->
 
         <div class="title-container">
             <h2>Levels in Aincrad</h2>        
@@ -99,7 +138,11 @@
             
         </div>
 
-        <div id="character" class="banner-container">
+        <div id="character" class="text-banner-container text-banner-3">
+            10 000 players
+        </div>
+
+        <div class="banner-container">
             <img src="img/asuna-kirito-4k.jpg" alt="">
             <div class="banner-text-container">
                 <p class="banner-text">10 000 players in Aincrad</p>
@@ -111,69 +154,87 @@
         </div>
 
         <div class="character-container"> 
-            <div class="character-bg"></div>
             <div class="overlay-bg"></div>
             <div class="character-card" id="kirito-card">
-                <div class="imgBox">
-                  <img src="img/kirito.png" class="card-img">
+
+                <div class="front">
+                    <div class="imgBox">
+                        <img src="img/kirito.png" class="card-img">
+                      </div>
+                      <div class="contentBox">
+                        <h3>Kirito</h3>
+                        <p class="nickname"></p>
+                      </div>
                 </div>
-                <div class="contentBox">
-                  <h3>Kirito</h3>
-                  <p class="nickname"></p>
-                </div>
+                <div class="back">Kirigaya Kazuto (桐ヶ谷 和人, Kirigaya Kazuto), born as Narusaka Kazuto (鳴坂 和人, Narusaka Kazuto), and known as Kirito (キリト, Kirito) in «Sword Art Online» (SAO).</div>
+                
             </div>
             <div class="character-card" id="asuna-card">
-                <div class="imgBox">
-                  <img src="img/asuna.webp" class="card-img">
+                <div class="front">
+                    <div class="imgBox">
+                        <img src="img/asuna.webp" class="card-img">
+                      </div>
+                      <div class="contentBox">
+                        <h3>Asuna</h3>
+                        <p class="nickname"></p>
+                      </div>
                 </div>
-                <div class="contentBox">
-                  <h3>Asuna</h3>
-                  <p class="nickname"></p>
-                </div>
+                <div class="back">Yuuki Asuna (結城 明日奈, Yūki Asuna), known as Asuna (アスナ, Asuna) in «Sword Art Online» (SAO).</div>
             </div>       
             <div class="character-card" id="klein-card">
-                <div class="imgBox">
-                  <img src="img/klein.png" class="card-img">
+                <div class="front">
+                    <div class="imgBox">
+                        <img src="img/klein.png" class="card-img">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Klein</h3>
+                        <p class="nickname"></p>
+                    </div>
                 </div>
-                <div class="contentBox">
-                  <h3>Klein</h3>
-                  <p class="nickname"></p>
-                </div>
+                <div class="back">Tsuboi Ryoutarou (壷井遼太郎, Tsuboi Ryōtarō), known as Klein (クライン, Kurain) in «Sword Art Online» (SAO).</div>
             </div>  
             <div class="character-card" id="agil-card">
-                <div class="imgBox">
-                  <img src="img/agil.png" class="card-img">
+                <div class="front">
+                    <div class="imgBox">
+                        <img src="img/agil.png" class="card-img">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Agil</h3>
+                        <p class="nickname"></p>
+                    </div>
                 </div>
-                <div class="contentBox">
-                  <h3>Agil</h3>
-                  <p class="nickname"></p>
-                </div>
+                <div class="back">Andrew Gilbert Mills (アンドリュー・ギルバート・ミルズ, Andoryū Girubāto Miruz?), known as Agil (エギル, Egiru) in Sword Art Online (SAO).</div>
             </div>
             <div class="character-card" id="silica-card">
-                <div class="imgBox">
-                  <img src="img/silica.png" class="card-img">
+                <div class="front">
+                    <div class="imgBox">
+                        <img src="img/silica.png" class="card-img">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Silica</h3>
+                        <p class="nickname"></p>
+                    </div>
                 </div>
-                <div class="contentBox">
-                  <h3>Silica</h3>
-                  <p class="nickname"></p>
-                </div>
+                <div class="back">Ayano Keiko (綾野珪子, Ayano Keiko), known as Silica (シリカ, Shirika?) in «Sword Art Online» (SAO).</div>
             </div>
             <div class="character-card" id="lisbeth-card">
-                <div class="imgBox">
-                  <img src="img/lisbeth.png" class="card-img">
+                <div class="front">
+                    <div class="imgBox">
+                        <img src="img/lisbeth.png" class="card-img">
+                    </div>
+                    <div class="contentBox">
+                        <h3>Lisbeth</h3>
+                        <p class="nickname"></p>
+                    </div>
                 </div>
-                <div class="contentBox">
-                  <h3>Lisbeth</h3>
-                  <p class="nickname"></p>
-                </div>
+                <div class="back">Shinozaki Rika (篠崎 里香, Shinozaki Rika), known as Lisbeth (リズベット, Rizubetto) in «Sword Art Online» (SAO).</div>
             </div>
         </div>
-        <div id="trailer" class="trailer-container">
-            <iframe class="trailer" src="https://www.youtube.com/embed/d_7CDGqJvfk?si=jqYM1sYslOhytFet&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
-            <div class="trailer-text-container">
-                <p class="trailer-text">Discover the castle Aincrad</p>
-            </div>
+
+        <div class="text-banner-container text-banner-4">
+            Aincrad <small>by Erlow</small>
         </div>
+
         
         <!--<div id="trailer" class="title-container">
             <h2>Discover Sword Art Online</h2>
@@ -184,5 +245,6 @@
     </div>
 
     <script src="js/parallax.js"></script>
+    <script src="js/flip-card.js"></script>
 </body>
 </html>
